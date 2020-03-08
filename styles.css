@@ -190,9 +190,4 @@ tr:nth-child(even) {
   #header-nav {
     display: none;
   }
-  #cím {
-  font-size: 4vw;
-  }
-  #infoblokk {
-    width: 40%;
 }
