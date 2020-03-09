@@ -40,7 +40,7 @@ body {
 }
 #header-nav li:hover {
   border-bottom: solid 2px;
-  border-color: #2BAE66ff;
+  border-color: rgb(43, 174, 102);
 }
 #nav-item {
   display: flex;
@@ -152,7 +152,7 @@ article {
   text-align:center;
 }
 .button {
-  background-color: #2BAE66ff; /* Green */
+  background-color: rgb(43, 174, 102); /* Green */
   border: none;
   color: white;
   padding: 10px;
