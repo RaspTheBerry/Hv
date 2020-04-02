@@ -42,9 +42,10 @@ body {
 }
 .nav-item {
   position: relative;
-  padding: 12px 10px;
+  padding: 12px 10px 9px;
   border-bottom: solid 3px;
   border-color: transparent;
+  transition: border-bottom 0.3s;
 }
 .openbtn {
   font-size: 15px;
@@ -107,13 +108,19 @@ hr {
 .nav-item:hover {
   border-bottom: solid 3px;
   border-color: rgb(43, 174, 102);
-  background-color: rgba(43, 174, 102, 0.2);
-}
+  background-color: rgba(200, 200, 200, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px) saturate(180%);
+  }
 #active {
-  border-bottom: solid 3px;
-  border-color: rgba(43, 174, 102, 0.05);
-  background-color: rgba(43, 174, 102, 0.2);
+  /*border-bottom: solid 3px;
+  border-color: rgb(43, 174, 102);
+  color: white;*/
+  background-color: rgba(200, 200, 200, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px) saturate(180%);
 }
+
 #kód {
   background-color: rgba(255, 255, 255, 0.6);
   font-size: 3vw;
@@ -150,6 +157,7 @@ content {
 article {
   margin: 0 auto;
   padding: 5vh;
+  padding-top: 2vh;
   max-width: 800px;
   font-family: Helvetica, Arial;
   line-height: 1.6;
@@ -205,6 +213,39 @@ tr:nth-child(even) {
 }
 #space {
   margin-bottom: 20px;
+}
+#temp {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+#gt {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 5vh;
+}
+#gt:hover {
+  border-bottom: 2px solid rgb(43,174,102);
+}
+#box {
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+.row {
+  margin: 2vh;
+}
+#middle {
+  display: flex;
+  justify-content: center;
+}
+#p {
+  text-decoration: none;
+  color: rgb(43, 173,102)
+}
+#p:hover {
+  text-decoration: underline;
 }
 @media screen and (min-width:600px) {
   #mySidepanel {
