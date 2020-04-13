@@ -280,6 +280,15 @@ tr:nth-child(even) {
   margin: 8px;
   color: #000;
 }
+@media screen and (max-width: 702px) {
+  .post {
+    flex-wrap: wrap;
+  }
+  .preview-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media screen and (min-width:600px) {
   #mySidepanel {
     display: none;
