@@ -15,22 +15,27 @@ function closeNav() {
 }
 </script>
   <img src="Images/EuInfo.png" alt="Eu infoblokk" id="infoblokk">
-<div class="wrap">
-  <img src="Images/banner.jpg" alt="mező" id="banner">
-  <div id="header">
-    <h2 id="kód">KEHOP-1.2.1-18-2018-00022</h2>
-    <h1 id="cím">Hódmezővásárhelyi Klímastratégia</h1>
+  <div class="wrap">
+    <picture>
+    <source media="(max-width: 1278px)" srcset="Images/banner.jpg">
+    <source media="(min-width: 1279px)" srcset="Images/banner1920.jpg" style="max-width: 100vw">
+    <img id="banner" src="Images/banner1920.jpg" alt="mező">
+    </picture>
+    <div id="header">
+      <h2 id="kód">KEHOP-1.2.1-18-2018-00022</h2>
+      <h1 id="cím">Hódmezővásárhelyi Klímastratégia</h1>
+    </div>
   </div>
-</div>
-  <div id="Navigation">
-    <ul id="header-nav">
-      <a id="sleek" href="index.html"><li class="nav-item">Főoldal</li></a>
-      <a id="sleek" href="projekt-osszefoglalo.html"><li class="nav-item">Projekt összefoglaló</li></a>
-      <a id="sleek" href="galeria.html"><li class="nav-item">Galéria</li></a>
-      <a id="sleek" href="sajtokozlemenyek.html"><li class="nav-item" id="active">Sajtóközlemények</li></a>
-      <a id="sleek" href="kapcsolat.html"><li class="nav-item">Kapcsolatfelvétel</li></a>
-      <a id="sleek" href="klimastrategia.html"><li class="nav-item">Klímastratégia</li></a>
-    </ul>
+    <div id="navigation">
+      <ul id="header-nav">
+        <a id="sleek" href="index.html"><li class="nav-item" id="active">Főoldal</li></a>
+        <a id="sleek" href="projekt-osszefoglalo.html"><li class="nav-item">Projekt összefoglaló</li></a>
+        <a id="sleek" href="jelentkezes.html"><li class="nav-item">Pályázat</li></a>
+        <a id="sleek" href="galeria.html"><li class="nav-item">Galéria</li></a>
+        <a id="sleek" href="sajtokozlemenyek.html"><li class="nav-item">Sajtóközlemények</li></a>
+        <a id="sleek" href="kapcsolat.html"><li class="nav-item">Kapcsolatfelvétel</li></a>
+        <a id="sleek" href="klimastrategia.html"><li class="nav-item">Klímastratégia</li></a>
+      </ul>
   <div>
   <button class="openbtn" onclick="openNav()">☰ Menü</button>
   </div>
@@ -51,11 +56,24 @@ function closeNav() {
 <hr>
 </div>
 <article>
-  <h2>OSLO, EURÓPA ZÖLD FŐVÁROSA (2019)</h2>
-  <p>Az országos és a megyei klímastratégiák elkészültét követően, városi szinten is lehetővé vált európai uniós pályázat keretében források igénybe vétele helyi klímastratégia kidolgozására.
-Hódmezővásárhely Megyei Jogú Város a Dipol Csoporthoz tartozó Atrois Kft. szakmai közreműködésével valósítja meg a KEHOP-1.2.1-18-2018-00022 azonosítószámú, „Hódmezővásárhelyi klímastratégia” című projektet. A pályázat keretében kidolgozásra kerül Hódmezővásárhely klímastratégiája, melynek célja, a klímaváltozás okozta kockázatok megelőzése, a hatások mérséklése, az alkalmazkodóképesség és a hatásokhoz való alkalmazkodás javítása érdekében olyan a helyi feltételekhez illeszkedő stratégiai dokumentum megalkotása, amely az érintettek széles körének bevonásával meghatározza a legfontosabb beavatkozási igényeket.</p>
-<p>A projekt első mozzanataként, 2020 március 3.-án a Polgármesteri Hivatal Házasságkötő termében (6800 Hódmezővásárhely, Kossuth tér 1.), Dr. Patkós Csaba, szakértő szakmai vezetésével és Dr. Forgó Gábor, a projektet megvalósító Atrois Kft. ügyvezetőjének irányításával tematikus workshopok keretében helyi intézmények képviselői és civilek vitatták meg a klímaváltozás kihívásait és fogalmaztak meg cselekvési irányokat.</p>
-<p>A sajtóközleményt megtekintheti az alábbi linkre kattintva:</p><a id="bt" href="https://www.hodmezovasarhely.hu/images/hirek/H%C3%93DMEZ%C5%90V%C3%81S%C3%81RHELY%20sajtokozlemeny%20WS%2020200303%20final.pdf"><button type="button" class="button">PDF Letöltése</button></a>
+  <h2 id="title">OSLO, EURÓPA ZÖLD FŐVÁROSA (2019)</h2>
+  <p id="src">(Források: <a href="https://ec.europa.eu/environment/europeangreencapital/wpcontent/uploads/2018/05/Oslo_Climate_Budget.pdf">Oslo Climate Budget</a>, 2018 –  és Municipality of Oslo (2019): Climate Budget, 2019. – Technical Report)</p>
+  <p>A norvég főváros több mint 650 ezer lakója számára klímabarát és igazán élhető, demokratikus és fenntartható életmódot kíván melynek fontos eleme a 2,3 t/fő éves széndioxid kibocsátás jelentős csökkentése.</p>
+  <p>Az éghajlatváltozással szembeni küzdelem elsődleges fontosságú a városban. A célkitűzések szerint 2020-ra az 1990-es szinthez képest felére csökkentették az üvegházgázok kibocsátását, 2050-re pedig szeretnék a szén-dioxid kibocsátást nullára vinni.</p>
+  <p>Az ambiciózus célokat integrált intézkedésekkel kívánják megoldani, így például a zéró kibocsátással működő közlekedéssel. Oslo jelenleg a világ elektromos jármű fővárosa, hiszen az eladott járművek 30%-a elektromos üzemű.</p>
+  <img src="Images\oslo.jpg" alt="oslo street view" class="picture">
+  <p class="news">Fotó: Csirik Mihály András</p>
+  <p>A kerékpározást segítő intézkedések, a közösségi közlekedés fejlesztése, autómentes övezetek kialakítása, az elektromos járművek használatának ösztönzése mind a klímacélok teljesülését segíti, de mellette csökkenti a lég- és zajszennyezettséget is. A tömegközlekedés népszerűsítésének fontos eleme például a járatok pontosságának növelése. A városi közlekedés részeként az elektromos taxik elterjedését a töltőoszlop-hálózat bővítésével, az áruszállítás zöldítését pedig az elektromos teherautók számára garantált parkolóhelyekkel kívánják elősegíteni.</p>
+  <img src="Images\os2.jpg" alt="oslo street view" class="picture">
+  <p class="news">Fotó: Csirik Mihály András</p>
+  <p>Ezen túl az innovációk és a zöld gazdaságban történő munkahelyek teremtése is kiemelkedő jelentőségű, ami a meglévő erőforrások fenntartható hasznosítását erősíti. Erre jó példa a zöldhulladékból és szennyvízből előállított üzemanyag, amelyek a városi buszokat és a hulladékgyűjtő járműveket hajtják. A megújuló energiaforrások földrajzi környezetnek megfelelő, hely-specifikus alkalmazásait telepítik le az ún. energia-állomásokon. Ilyen például a Romerike biogáz erőmű, ahol kísérleti jelleggel az ételmaradékot is feldolgozzák. Ugyancsak pilóta projektként hozzáláttak egy lakópark átalakításához, hogy ott minden energiaigényt tiszta elektromos energiával fedezzenek. A projektet benevezték az „EU Green Charge” versenyre is. A technológiai innováció jegyében 2030-ra a város távfűtését is ellátó szemétégetőjében szén-dioxid elnyelő rendszert fognak telepíteni.</p>
+  <p>2016-ban a város „klíma-költségvetést” fogadott el, amelyben az energiagazdaság, az épített környezet és az erőforrások területén határoztak meg különböző intézkedéseket. Ennek megfelelően a szén-dioxid kibocsátást hasonló módon kezelik, mint a költségvetést. A norvég város közbeszerzéseiben az anyagi szempontokkal azonos súllyal esik latba az adott szolgáltatások és termékek klímasemlegessége.</p>
+  <p>A norvég fővárosban a cégek, a civil szervezetek és a lakosság partnerségében létrejött a „Business for Climate Network”, amely a gazdaság és a lakosság energiahasználatának klimatikus következményeit igyekszik csökkenteni. Ennek támogatására a norvég nemzeti támogatási alapon (ENOVA) túl a város saját forrásaiból is áldoz.</p>
+  <p>A számszerűsíthető kibocsátás csökkentés mellett az önkormányzat nagy hangsúlyt fektet a szemléletformálásra is. A város a kiemelt célcsoportokkal, mint a vállalkozások, a gyerekek és fiatalok („Climate Pilots”) intenzív kommunikációt folytat.</p>
+  <img src="Images\os3.jpg" alt="oslo street view" class="picture">
+  <p class="news">Fotó: Csirik Mihály András</p>
+  <p>A nagy ívű tervek megvalósítását sokszor még a nemzeti jogszabályi környezet sem teszi lehetővé, így Oslo aktívan lobbyzik a norvég kormány felé néhány, a tervek végrehajtását megnehezítő törvény megváltoztatásáért.</p>
+  <p>A város komplex és példaértékű klímavédelmi programja méltán vált világhírűvé és követendő globális sztenderddé számos város számára.</p>
 </article>
 <footer>
   <div class="container">

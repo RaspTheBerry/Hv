@@ -16,21 +16,26 @@ function closeNav() {
 </script>
 <img src="Images/EuInfo.png" alt="Eu infoblokk" id="infoblokk">
 <div class="wrap">
-<img src="Images/banner.jpg" alt="mező" id="banner">
-<div id="header">
-  <h2 id="kód">KEHOP-1.2.1-18-2018-00022</h2>
-  <h1 id="cím">Hódmezővásárhelyi Klímastratégia</h1>
+  <picture>
+  <source media="(max-width: 1278px)" srcset="Images/banner.jpg">
+  <source media="(min-width: 1279px)" srcset="Images/banner1920.jpg" style="max-width: 100vw">
+  <img id="banner" src="Images/banner1920.jpg" alt="mező">
+  </picture>
+  <div id="header">
+    <h2 id="kód">KEHOP-1.2.1-18-2018-00022</h2>
+    <h1 id="cím">Hódmezővásárhelyi Klímastratégia</h1>
+  </div>
 </div>
-</div>
-<div id="Navigation">
-  <ul id="header-nav">
-    <a id="sleek" href="index.html"><li class="nav-item">Főoldal</li></a>
-    <a id="sleek" href="projekt-osszefoglalo.html"><li class="nav-item">Projekt összefoglaló</li></a>
-    <a id="sleek" href="galeria.html"><li class="nav-item">Galéria</li></a>
-    <a id="sleek" href="sajtokozlemenyek.html"><li class="nav-item">Sajtóközlemények</li></a>
-    <a id="sleek" href="kapcsolat.html"><li class="nav-item">Kapcsolatfelvétel</li></a>
-    <a id="sleek" href="klimastrategia.html"><li class="nav-item" id="active">Klímastratégia</li></a>
-  </ul>
+  <div id="navigation">
+    <ul id="header-nav">
+      <a id="sleek" href="index.html"><li class="nav-item" id="active">Főoldal</li></a>
+      <a id="sleek" href="projekt-osszefoglalo.html"><li class="nav-item">Projekt összefoglaló</li></a>
+      <a id="sleek" href="jelentkezes.html"><li class="nav-item">Pályázat</li></a>
+      <a id="sleek" href="galeria.html"><li class="nav-item">Galéria</li></a>
+      <a id="sleek" href="sajtokozlemenyek.html"><li class="nav-item">Sajtóközlemények</li></a>
+      <a id="sleek" href="kapcsolat.html"><li class="nav-item">Kapcsolatfelvétel</li></a>
+      <a id="sleek" href="klimastrategia.html"><li class="nav-item">Klímastratégia</li></a>
+    </ul>
 <div>
 <button class="openbtn" onclick="openNav()">☰ Menü</button>
 </div>

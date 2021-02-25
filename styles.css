@@ -1,17 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 body {
   margin: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serifp
 }
 #banner {
-  max-width: 100%;
-  max-height: 100vh;
+  height: 297px;
 }
 #infoblokk {
   position: fixed;
   top: 0;
   right: 0;
   width: 25%;
-  z-index: 3;
+  z-index: 4;
 }
 .container {
   max-width: 1000px;
@@ -19,6 +19,9 @@ body {
   margin: 0;
 }
 #header {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #navigation {
   display: flex;
@@ -26,7 +29,7 @@ body {
   justify-content: space-around;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   box-shadow: 1px 1px 4px grey;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(10px) saturate(180%);
@@ -60,7 +63,7 @@ body {
 .sidepanel  {
   width: 0;
   position: fixed;
-  z-index: 4;
+  z-index: 5;
   height: 100%;
   top: 0;
   right: 0;
@@ -99,7 +102,7 @@ hr {
     left: 0;
 }
 #sleek {
-  color: #000;
+  color: #121212;
   text-decoration: none;
   font-family: Helvetica, Arial;
   font-weight: bold;
@@ -155,12 +158,17 @@ content {
   font: Arial;
 }
 article {
-  margin: 0 auto;
   padding: 5vh;
   padding-top: 2vh;
-  max-width: 800px;
+  max-width: 60%;
   font-family: Helvetica, Arial;
   line-height: 1.6;
+  overflow: hidden;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #tabla {
   max-width: 900px;
@@ -277,6 +285,7 @@ tr:nth-child(even) {
   display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 0;
+  border-radius: 10px;
 }
 .news {
   margin: auto 0;
@@ -346,6 +355,33 @@ footer li {
 }
 .column:hover #gt {
   color: white;
+}
+#visual {
+  max-width: 50%;
+}
+.text {
+  float: left;
+  display: inline-block;
+
+}
+.sideVisual {
+  display: inline-block;
+  float: left;
+}
+#title {
+  margin-bottom: 0;
+
+}
+#src {
+  margin-top: 0;
+}
+.picture {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto;
+}
+article h2 {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 702px) {
   .post {

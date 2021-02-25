@@ -16,7 +16,11 @@ function closeNav() {
 </script>
   <img src="Images/EuInfo.png" alt="Eu infoblokk" id="infoblokk">
 <div class="wrap">
-  <img src="Images/banner.jpg" alt="mező" id="banner">
+  <picture>
+  <source media="(max-width: 1250px)" srcset="Images/banner.jpg">
+  <source media="(min-width: 1250px)" srcset="Images/banner1920.jpg">
+  <img id="banner" src="Images/banner1920.jpg" alt="mező">
+  </picture>
   <div id="header">
     <h2 id="kód">KEHOP-1.2.1-18-2018-00022</h2>
     <h1 id="cím">Hódmezővásárhelyi Klímastratégia</h1>
@@ -26,6 +30,7 @@ function closeNav() {
     <ul id="header-nav">
       <a id="sleek" href="index.html"><li class="nav-item" id="active">Főoldal</li></a>
       <a id="sleek" href="projekt-osszefoglalo.html"><li class="nav-item">Projekt összefoglaló</li></a>
+      <a id="sleek" href="jelentkezes.html"><li class="nav-item">Pályázat</li></a>
       <a id="sleek" href="galeria.html"><li class="nav-item">Galéria</li></a>
       <a id="sleek" href="sajtokozlemenyek.html"><li class="nav-item">Sajtóközlemények</li></a>
       <a id="sleek" href="kapcsolat.html"><li class="nav-item">Kapcsolatfelvétel</li></a>
@@ -53,16 +58,33 @@ function closeNav() {
 <div class="news">
   <h2 id="news">Hírek</h2>
 </div>
+<div class="center"
+<a href="oslo.html">
 <article class="post">
+<div class="preview-image">
+  <img src="Images/plakat.jpg" alt="Oslo" height="200px">
+</div>
+<div class="content">
+  <h2 id="zero" class="line">MIT TEHETEK ÉN? – PLAKÁTTERV- ÉS VIDEÓPÁLYÁZAT PÁLYÁZATI FELHÍVÁS</h2>
+<p id="zero">A pályázat tárgya egy plakátterv vagy rövid videó elkészítése válaszul arra, hogy mit tehetek én a Föld védelmében, a klímaváltozás mérsékléseként, negatív hatásainak megfékezésére.</p>
+</div>
+</article>
+</a>
+</div class="center">
+<br>
+<div class="center"
+<a href="oslo.html">
+  <article class="post">
   <div class="preview-image">
-  <img src="Images/Oslo.jpg" alt="Oslo" height="200px">
+    <img src="Images/Oslo.jpg" alt="Oslo" height="200px">
   </div>
   <div class="content">
-  <a href="Files/Oslo_bemutato.pdf" target="_blank" id="bt"><h2 id="zero" class="line">OSLO, EURÓPA ZÖLD FŐVÁROSA</h2></a>
+    <h2 id="zero" class="line">OSLO, EURÓPA ZÖLD FŐVÁROSA</h2>
   <p id="zero">A norvég főváros több mint 650 ezer lakója számára klímabarát és igazán élhető, demokratikus és fenntartható életmódot kíván melynek fontos eleme a 2,3 t/fő éves szén- dioxid kibocsátás jelentős csökkentése.</p>
-  <a href="Files/Oslo_bemutato.pdf" target="_blank" style="margin-left: 10px; margin-bottom: 2px;" id="bt"><button type="button" class="b">Tovább olvasom</button></a>
-  </div>
+</div>
 </article>
+</a>
+</div class="center">
 <content>
   <a href="sajtokozlemenyek.html"><img class="ico" src="Images/News2.jpg" alt="Sajtóközlemények"></a>
   <a href="projekt-osszefoglalo.html"><img class="ico" id="projektbt"src="Images/Brief2.jpg" alt="Összefoglaló"></a>
