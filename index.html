@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 </head>
-<body>
+<body class="light">
 <script>
 function openNav() {
   document.getElementById("mySidepanel").style.width = "250px";
@@ -12,6 +12,11 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
+}
+document.getElementById("theme-toggle").addEventListener("click", function() {
+  document.body.classList.toggle("light");
+  document.body.classList.toggle("dark");
+});
 }
 </script>
   <img src="Images/EuInfo.png" alt="Eu infoblokk" id="infoblokk">
@@ -55,26 +60,22 @@ function closeNav() {
 <a href="klimastrategia.html">Klímastratégia</a>
 <hr>
 </div>
+<button id="theme-toggle">Toggle Dark Theme</button>
 <div class="news">
   <h2 id="news">Hírek</h2>
 </div>
-<div class="center"
-<a href="oslo.html">
-<article class="post">
+<a href="jelentkezes.html" class="post3d center">
 <div class="preview-image">
-  <img src="Images/plakat.jpg" alt="Oslo" height="200px">
+  <img src="Images/plakat.jpg" alt="plakát" height="200px">
 </div>
 <div class="content">
   <h2 id="zero" class="line">MIT TEHETEK ÉN? – PLAKÁTTERV- ÉS VIDEÓPÁLYÁZAT PÁLYÁZATI FELHÍVÁS</h2>
 <p id="zero">A pályázat tárgya egy plakátterv vagy rövid videó elkészítése válaszul arra, hogy mit tehetek én a Föld védelmében, a klímaváltozás mérsékléseként, negatív hatásainak megfékezésére.</p>
 </div>
-</article>
 </a>
 </div class="center">
 <br>
-<div class="center"
-<a href="oslo.html">
-  <article class="post">
+<a href="oslo.html" class="post3d center">
   <div class="preview-image">
     <img src="Images/Oslo.jpg" alt="Oslo" height="200px">
   </div>
@@ -82,7 +83,6 @@ function closeNav() {
     <h2 id="zero" class="line">OSLO, EURÓPA ZÖLD FŐVÁROSA</h2>
   <p id="zero">A norvég főváros több mint 650 ezer lakója számára klímabarát és igazán élhető, demokratikus és fenntartható életmódot kíván melynek fontos eleme a 2,3 t/fő éves szén- dioxid kibocsátás jelentős csökkentése.</p>
 </div>
-</article>
 </a>
 </div class="center">
 <content>
