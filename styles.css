@@ -4,7 +4,7 @@ body {
   --background-alt: rgba(255, 255, 255, 0.6);
   --foreground: #1d3557;
   --accent: rgb(43, 174, 102);
-  --title: rgb(10, 94, 42);
+  --title: rgb(10, 94, 42)
 }
 body.dark-theme {
   --background: #121212;
