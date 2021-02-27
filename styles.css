@@ -17,9 +17,6 @@ body{
   background-color: #fff;
 }
 #banner {
-  max-width: 100%;
-  min-height: 297px;
-  max-height: 100vh;
 }
 #infoblokk {
   position: fixed;
