@@ -9,7 +9,8 @@ body {
 body.dark-theme {
   --background: #121212;
   --background-alt: rgb(51, 51, 51);
-  --foreground: #fff;
+  --foreground: rgba(255,255,255, 0.87);
+  --foreground-d: rgba(255,255,255, 0.60);
   --accent: rgb(43, 174, 102);
   --title: rgb(17, 162, 72);
 }
@@ -17,10 +18,10 @@ body{
   margin: 0;
   font-family: Helvetica, sans-serif;
   background-color: var(--background);
-  color: var(--foreground)
-  x-overflow: none;
+  color: var(--foreground);
 }
 #banner {
+  max-width: 100%;
 }
 #infoblokk {
   position: fixed;
@@ -240,6 +241,7 @@ table {
   font-family: Helvetica, Arial;
   border-collapse: collapse;
   margin: 10px auto;
+  color: var(--foreground)
 }
 td, th {
   border: 1px solid #dddddd;
@@ -318,6 +320,7 @@ article {
 }
 #news {
   text-align: center;
+  color: var(--foreground)
 }
 .news {
   width: 25%;
@@ -337,7 +340,7 @@ article {
 footer {
   background-color: var(--accent);
   min-height: 250px;
-  color: white;
+  color: var(--background);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -380,7 +383,7 @@ footer li {
   background: linear-gradient(90deg, rgba(43, 174, 102,1) 35%, #77D5A3 100%);
 }
 .column:hover #gt {
-  color: white;
+  color: var(--foreground);
 }
 #visual {
   max-width: 50%;

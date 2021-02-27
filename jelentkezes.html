@@ -13,32 +13,10 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
-const htmlEl = document.getElementsByTagName('html')[0];
-
-const toggleTheme = (theme) => {
-    htmlEl.dataset.theme = theme;
-}
-// Capture the current theme from local storage and adjust the page to use the current theme.
-const htmlEl = document.getElementsByTagName('html')[0];
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-if (currentTheme) {
-    htmlEl.dataset.theme = currentTheme;
-}
-
-// When the user changes the theme, we need to save the new value on local storage
-const toggleTheme = (theme) => {
-    htmlEl.dataset.theme = theme;
-    localStorage.setItem('theme', theme);
-}
 </script>
   <img src="Images/EuInfo.png" alt="Eu infoblokk" id="infoblokk">
   <div class="wrap">
-    <picture>
-    <source media="(max-width: 1278px)" srcset="Images/banner.jpg">
-    <source media="(min-width: 1279px)" srcset="Images/banner1920.jpg" style="max-width: 100vw">
-    <img id="banner" src="Images/banner1920.jpg" alt="mező">
-    </picture>
+    <img id="banner" src="Images/banner.jpg" srcset="Images/banner.jpg 1278w,Images/banner1920.jpg 1920w" alt="mező">
     <div id="header">
       <h2 id="kód">KEHOP-1.2.1-18-2018-00022</h2>
       <h1 id="cím">Hódmezővásárhelyi Klímastratégia</h1>
@@ -46,9 +24,9 @@ const toggleTheme = (theme) => {
   </div>
     <div id="navigation">
       <ul id="header-nav">
-        <a id="sleek" href="index.html"><li class="nav-item" id="active">Főoldal</li></a>
+        <a id="sleek" href="index.html"><li class="nav-item">Főoldal</li></a>
         <a id="sleek" href="projekt-osszefoglalo.html"><li class="nav-item">Projekt összefoglaló</li></a>
-        <a id="sleek" href="jelentkezes.html"><li class="nav-item">Pályázat</li></a>
+        <a id="sleek" href="jelentkezes.html"><li class="nav-item" id="active">Pályázat</li></a>
         <a id="sleek" href="galeria.html"><li class="nav-item">Galéria</li></a>
         <a id="sleek" href="sajtokozlemenyek.html"><li class="nav-item">Sajtóközlemények</li></a>
         <a id="sleek" href="kapcsolat.html"><li class="nav-item">Kapcsolatfelvétel</li></a>
@@ -73,32 +51,76 @@ const toggleTheme = (theme) => {
 <a href="klimastrategia.html">Klímastratégia</a>
 <hr>
 </div>
-<button id="theme-switcher">Switch themes!</button>
+<button class="btn-toggle">Switch themes!</button>
+<script>
+const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+document.body.classList.toggle("light-theme");
+}
+
+btn.addEventListener("click", function () {
+if (prefersDarkScheme.matches) {
+ document.body.classList.toggle("light-theme");
+ var theme = document.body.classList.contains("light-theme")
+   ? "light"
+   : "dark";
+} else {
+ document.body.classList.toggle("dark-theme");
+ var theme = document.body.classList.contains("dark-theme")
+   ? "dark"
+   : "light";
+}
+localStorage.setItem("theme", theme);
+});
+</script>
   <article class="center">
       <img src="Images/plakat.jpg" alt="plakát" width="500vw">
       <div>
         <h2 id="zero" class="line">MIT TEHETEK ÉN?</h2>
         <strong id="zero">Plakátterv és videopályázati felhívás</strong>
         <p id="zero">A pályázat tárgya egy plakátterv vagy rövid videó elkészítése válaszul arra, hogy mit tehetek én a Föld védelmében, a klímaváltozás mérsékléseként, negatív hatásainak megfékezésére.</p>
-        <p>A pályaművek benyújtásának módja és határideje:
+        <p id="zero">A pályaművek benyújtásának módja és határideje:
 A pályázatokat kizárólag elektronikus úton lehet benyújtani a kovacs.ferenc@hodmezovasarhely.hu e-mailcímre Mit tehetek én? tárgymegjelöléssel. A pályaműveket javasolt nagy fájlküldő alkalmazások (pl. WeTransfer) használatával beküldeni.</p>
       </div>
   </article>
+  <article>
   <p>Az e-mail kötelező elemei:
-   Pályamű plakátterv: 1 darab bármilyen technikával, fekete-fehér vagy színes saját készítésű plakátterv.
-  o A kép mérete A4, maximum 5 megabájt.
-  o Fájlformátum: JPEG, PNG vagy TIFF.
-  o A pályamű fájlneve a következők szerint legyen megadva: plakat_palyazoneve_szuletesieve (pl: plakat_nagyattila_20061125)
-   Pályázati adatlap és 1. sz. melléklete (Hozzájáruló nyilatkozat 18 éven aluli gyermek törvényes képviselője részére személyes adatok kezeléséhez, sokszorosításhoz, továbbításhoz)
-  o Hiánytalanul kitöltve, aláírva.
-  o Az adatlapot kép vagy pdf formátumban szkennelve vagy fotózva kell megküldeni.
-  o Az adatlap fájlneve a következők szerint legyen megadva: adatlap_palyazoneve_szuletesieve (pl: adatlap_nagyattila_20061125)
-  VAGY
-   Pályamű videó: 1 darab bármilyen videózásra alkalmas eszközzel (mobiltelefon, videokamera) készített fekete-
-  fehér vagy színes saját alkotás.
-  o A videó hossza maximum 30 mp.
-  o A pályamű fájlneve a következők szerint legyen megadva: video_palyazoneve_szuletesieve (pl: video_nagyattila_20061125)</p>
-<footer>
+    <ul>
+  <li> Pályamű plakátterv: 1 darab bármilyen technikával, fekete-fehér vagy színes saját készítésű plakátterv.</li>
+      <ul>
+        <li>A kép mérete A4, maximum 5 megabájt.</li>
+        <li>Fájlformátum: JPEG, PNG vagy TIFF.</li>
+        <li>A pályamű fájlneve a következők szerint legyen megadva: plakat_palyazoneve_szuletesieve<br> (pl: plakat_nagyattila_20061125)</li>
+      </ul>
+  <li> Pályázati adatlap és 1. sz. melléklete (Hozzájáruló nyilatkozat 18 éven aluli gyermek törvényes képviselője részére személyes adatok kezeléséhez, sokszorosításhoz, továbbításhoz)</li>
+      <ul>
+        <li>Hiánytalanul kitöltve, aláírva.</li>
+        <li>Az adatlapot kép vagy pdf formátumban szkennelve vagy fotózva kell megküldeni.</li>
+        <li>Az adatlap fájlneve a következők szerint legyen megadva: adatlap_palyazoneve_szuletesieve<br> (pl: adatlap_nagyattila_20061125)</li>
+      </ul>
+  Vagy
+  <li>Pályamű videó: 1 darab bármilyen videózásra alkalmas eszközzel (mobiltelefon, videokamera) készített fekete-
+  fehér vagy színes saját alkotás.</li>
+      <ul>
+        <li>A videó hossza maximum 30 mp.</li>
+        <li>A pályamű fájlneve a következők szerint legyen megadva: video_palyazoneve_szuletesieve<br> (pl: video_nagyattila_20061125)</li>
+      </ul>
+  <li>Pályázati adatlap és 1. sz. melléklete (Hozzájáruló nyilatkozat 18 éven aluli gyermek törvényes képviselője
+  részére személyes adatok kezeléséhez, sokszorosításhoz, továbbításhoz)</li>
+    <ul>
+      <li>Hiánytalanul kitöltve, aláírva.</li>
+      <li>Az adatlapot kép vagy pdf formátumban szkennelve vagy fotózva kell megküldeni.</li>
+      <li>Az adatlap fájlneve a következők szerint legyen megadva: adatlap_palyazoneve_szuletesieve<br>
+      (pl: adatlap_nagyattila_20061125)</li>
+    </ul>
+  </ul>
+</article>
+  <footer>
     <div class="container">
       <div class="FooterColumn">
         <h2 class="footerTitle">Hódmezővásárhely</h2>
@@ -112,9 +134,9 @@ A pályázatokat kizárólag elektronikus úton lehet benyújtani a kovacs.feren
           <br>
           <li><img id="ficon" src="Images\person.png" width="24px">Kovács Ferenc</li>
           <br>
-          <li><img id="ficon" src="Images\phone2.png" width="24px">Telefon: <a class="fa" href="tel:+62 530 100/246" id="number" class="footer-word" style="text-decoration: none; color: white;">+62 530 100/246</a></li>
+          <li><img id="ficon" src="Images\phone2.png" width="24px">Telefon: <a class="fa" href="tel:+62 530 100/246" id="number" class="footer-word" style="text-decoration: none; color: var(--background);">+62 530 100/246</a></li>
           <br>
-          <li><img id="ficon" src="Images\email.png" width="24px">Email: <a class="fa" href="mailto:kovacs.ferenc@hodmezovasarhely.hu" style="text-decoration: none; color: white;">kovacs.ferenc@hodmezovasarhely.hu</a></li>
+          <li><img id="ficon" src="Images\email.png" width="24px">Email: <a class="fa" href="mailto:kovacs.ferenc@hodmezovasarhely.hu" style="text-decoration: none; color: var(--background);">kovacs.ferenc@hodmezovasarhely.hu</a></li>
       </ul>
       </div>
       </div>
