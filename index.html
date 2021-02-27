@@ -1,6 +1,7 @@
 <html lang="hu">
 <head>
   <link rel="stylesheet" href="styles.css">
+  <link rel=""
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 </head>
@@ -13,33 +14,12 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
-document.getElementById("theme-toggle").addEventListener("click", function() {
-  document.body.classList.toggle("light");
-  document.body.classList.toggle("dark");
-});
-}
-var toggle = document.getElementById("theme-toggle");
-
-var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-if (storedTheme)
-    document.documentElement.setAttribute('data-theme', storedTheme)
-
-
-toggle.onclick = function() {
-    var currentTheme = document.documentElement.getAttribute("data-theme");
-    var targetTheme = "light";
-
-    if (currentTheme === "light") {
-        targetTheme = "dark";
-    }
-
-    document.documentElement.setAttribute('data-theme', targetTheme)
-    localStorage.setItem('theme', targetTheme);
-};
+</script>
+<script type="text/javascript" src="darkTheme.js">
 </script>
   <img src="Images/EuInfo.png" alt="Eu infoblokk" id="infoblokk">
 <div class="wrap">
-  <img id="banner" src="Images/banner.jpg" srcset="Images/banner1920.jpg 1920w" alt="mező">
+  <img id="banner" src="Images/banner.jpg" srcset="Images/banner.jpg 1278w,Images/banner1920.jpg 1920w" alt="mező">
   <div id="header">
     <h2 id="kód">KEHOP-1.2.1-18-2018-00022</h2>
     <h1 id="cím">Hódmezővásárhelyi Klímastratégia</h1>
@@ -74,7 +54,7 @@ toggle.onclick = function() {
 <a href="klimastrategia.html">Klímastratégia</a>
 <hr>
 </div>
-<button id="theme-toggle">Toggle Dark Theme</button>
+<button class="btn-toggle">Switch themes!</button>
 <div class="news">
   <h2 id="news">Hírek</h2>
 </div>

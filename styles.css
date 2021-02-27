@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
-:root, html[data-theme="light"] {
+body {
   --background: #fff;
   --background-alt: rgba(255, 255, 255, 0.6);
   --foreground: #1d3557;
   --accent: rgb(43, 174, 102);
+  --title: rgb(10, 94, 42)
 }
-html[data-theme="dark"] {
+body.dark-theme {
   --background: #121212;
-  --background-alt: rgba(18, 18, 18, 0.6);
+  --background-alt: rgb(51, 51, 51);
   --foreground: #fff;
   --accent: rgb(43, 174, 102);
+  --title: rgb(17, 162, 72);
 }
 body{
   margin: 0;
   font-family: Helvetica, sans-serif;
-  background-color: #fff;
+  background-color: var(--background);
+  color: var(--foreground)
+  x-overflow: none;
 }
 #banner {
 }
@@ -89,7 +93,7 @@ body{
   padding: 24px 8px 24px 32px;
   text-decoration: none;
   font-size: 1em;
-  color: var(--inheritforeground);
+  color: var(--foreground);
   display: block;
   transition: 0.3s;
 }
@@ -142,13 +146,13 @@ a {
 #kód {
   background-color: var(--background-alt);
   font-size: 3vw;
-  color: rgb(10, 94, 42);
+  color: var(--title);
   font-family: Helvetica, Arial;
 }
 #cím {
   background-color: var(--background-alt);
   font-size: 4.7vw;
-  color: rgb(10, 94, 42);
+  color: var(--title);
   font-family: Helvetica, Arial;
 }
 h3 {
@@ -307,6 +311,7 @@ article {
   font-family: Helvetica, Arial;
   line-height: 1.6;
   overflow: hidden;
+  background-color: var(--background-alt);
 }
 .news {
   margin: auto 0;
@@ -446,4 +451,21 @@ article h2 {
   #projektbt {
     margin-top: 10px;
   }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --background: #121212;
+    --background-alt: rgb(51, 51, 51);
+    --foreground: #fff;
+    --accent: rgb(43, 174, 102);
+    --title: rgb(17, 162, 72);
+  }
+  body.light-theme {
+    --background: #fff;
+    --background-alt: rgba(255, 255, 255, 0.6);
+    --foreground: #1d3557;
+    --accent: rgb(43, 174, 102);
+    --title: rgb(10, 94, 42)
+  }
+
 }

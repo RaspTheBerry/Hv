@@ -13,6 +13,24 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
+const htmlEl = document.getElementsByTagName('html')[0];
+
+const toggleTheme = (theme) => {
+    htmlEl.dataset.theme = theme;
+}
+// Capture the current theme from local storage and adjust the page to use the current theme.
+const htmlEl = document.getElementsByTagName('html')[0];
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    htmlEl.dataset.theme = currentTheme;
+}
+
+// When the user changes the theme, we need to save the new value on local storage
+const toggleTheme = (theme) => {
+    htmlEl.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
+}
 </script>
 <img src="Images/EuInfo.png" alt="Eu infoblokk" id="infoblokk">
 <div class="wrap">
@@ -55,6 +73,7 @@ function closeNav() {
 <a href="klimastrategia.html">Klímastratégia</a>
 <hr>
 </div>
+<button id="theme-switcher">Switch themes!</button>
 <article>
 <h2>Hódmezővásárhely Önkormányzata a KEHOP-1.2.1-18-2018-00022 azonosító számú, „Hódmezővásárhelyi klímastratégia” tárgyú projekt keretében, európai uniós támogatásból készítteti el Hódmezővásárhely Klímastratégiáját.</h2>
 <p class=""><strong>Bár a klímaváltozás globális folyamat, mind a kibocsátások mérséklése, mind az alkalmazkodásra való felkészülés és az ezekhez kapcsolódó szemléletformálás csak helyi szinten, az érintettek összefogásával valósítható meg.</strong></p>
