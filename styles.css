@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
-.light {
+:root, html[data-theme="light"] {
   --background: #fff;
   --background-alt: rgba(255, 255, 255, 0.6);
   --foreground: #1d3557;
   --accent: rgb(43, 174, 102);
 }
-.dark {
+html[data-theme="dark"] {
   --background: #121212;
   --background-alt: rgba(18, 18, 18, 0.6);
   --foreground: #fff;
@@ -150,7 +150,7 @@ a {
 }
 #cím {
   background-color: var(--background-alt);
-  font-size: 5vw;
+  font-size: 4.7vw;
   color: rgb(10, 94, 42);
   font-family: Helvetica, Arial;
 }
