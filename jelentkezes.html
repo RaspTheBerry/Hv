@@ -43,6 +43,8 @@ function closeNav() {
 <hr>
 <a href="projekt-osszefoglalo.html">Projekt összefoglaló</a>
 <hr>
+<a href="jelentkezes.html">Pályázat</a>
+<hr>
 <a href="galeria.html">Galéria</a>
 <hr>
 <a href="sajtokozlemenyek.html">Sajtóközlemények</a>
@@ -52,7 +54,7 @@ function closeNav() {
 <a href="klimastrategia.html">Klímastratégia</a>
 <hr>
 </div>
-<button class="btn-toggle">Sötét/Világos oldal</button>
+<button class="btn-toggle"><p id="toggleD">Sötét oldal</p><p id="toggleL">Világos oldal</p></button>
 <script>
 const btn = document.querySelector(".btn-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -79,19 +81,19 @@ if (prefersDarkScheme.matches) {
 localStorage.setItem("theme", theme);
 });
 </script>
-  <article class="center" id="wide">
-      <img src="Images/plakat.jpg" alt="plakát" width="500vw">
-      <div>
-        <h2 id="zero" class="line">MIT TEHETEK ÉN?</h2>
-        <strong id="zero">Plakátterv és videopályázati felhívás</strong>
-        <p id="zero">A pályázat tárgya egy plakátterv vagy rövid videó elkészítése válaszul arra, hogy mit tehetek én a Föld védelmében, a klímaváltozás mérsékléseként, negatív hatásainak megfékezésére.</p>
-        <strong id="zero">Pályázók köre:</strong>
-        <p id="zero">A plakát- és videópályázaton Hódmezővásárhely általános és középiskolás tanulói vehetnek részt.</p>
-        <strong id="zero">A pályaművek benyújtásának módja és határideje:</strong>
-        <p id="zero">A pályázatokat kizárólag elektronikus úton lehet benyújtani a kovacs.ferenc@hodmezovasarhely.hu e-mailcímre Mit tehetek én? tárgymegjelöléssel. A pályaműveket javasolt nagy fájlküldő alkalmazások (pl. WeTransfer) használatával beküldeni.</p>
-        <strong id="zero">Benyújtási határidő:</strong>
-        <p id="zero">A pályázatokat legkésőbb 2021. március 31. 23 óra 59 percig lehet benyújtani.<p>
-        <strong id="zero">Részletes leírás és jelentkezési lap:</stong><br>
+  <article id="wide">
+      <img id="ad"src="Images/plakat.jpg" alt="plakát" width="45%" height="50%">
+      <div class="content3d">
+        <h2 class="line">MIT TEHETEK ÉN?</h2>
+        <strong>Plakátterv és videopályázati felhívás</strong>
+        <p>A pályázat tárgya egy plakátterv vagy rövid videó elkészítése válaszul arra, hogy mit tehetek én a Föld védelmében, a klímaváltozás mérsékléseként, negatív hatásainak megfékezésére.</p>
+        <strong>Pályázók köre:</strong>
+        <p>A plakát- és videópályázaton Hódmezővásárhely általános és középiskolás tanulói vehetnek részt.</p>
+        <strong>A pályaművek benyújtásának módja és határideje:</strong>
+        <p>A pályázatokat kizárólag elektronikus úton lehet benyújtani a kovacs.ferenc@hodmezovasarhely.hu e-mailcímre Mit tehetek én? tárgymegjelöléssel. A pályaműveket javasolt nagy fájlküldő alkalmazások (pl. WeTransfer) használatával beküldeni.</p>
+        <strong>Benyújtási határidő:</strong>
+        <p>A pályázatokat legkésőbb 2021. március 31. 23 óra 59 percig lehet benyújtani.</p>
+        <strong>Részletes leírás és jelentkezési lap:</stong><br>
         <a id="bt" href="Files\Hmvhely_klima_tanulmanyi_palyazati_felhivas.pdf"><button type="button" class="button">Részletes leírás (pdf)</button></a>
         <a id="bt" href="Files\Hmvhely_klima_tanulmanyi_palyazati_adatlap.docx"><button type="button" class="button">Jelentkezési adatlap (docx)</button></a>
       </div>

@@ -5,6 +5,8 @@ body {
   --foreground: #1d3557;
   --accent: rgb(43, 174, 102);
   --title: rgb(10, 94, 42);
+  --magic-d: inline;
+  --magic-l: none;
 }
 body.dark-theme {
   --background: #121212;
@@ -13,6 +15,8 @@ body.dark-theme {
   --foreground-d: rgba(255,255,255, 0.60);
   --accent: rgb(43, 174, 102);
   --title: rgb(17, 162, 72);
+  --magic-d: none;
+  --magic-l: inline;
 }
 body{
   margin: 0;
@@ -172,6 +176,12 @@ content {
   justify-content: space-around;
   margin: 30px 10px;
 }
+.content3d {
+  display: flex-start;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin: 0.7vw;
+}
 #soon {
   text-align: center;
   font-size: 3vw;
@@ -249,7 +259,7 @@ td, th {
   padding: 8px;
 }
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: var(--background-alt);
 }
 #space {
   margin-bottom: 20px;
@@ -305,6 +315,7 @@ article {
 }
 #wide {
   max-width: 70%;
+  display: flex;
 }
 .post3d {
   display: flex;
@@ -419,11 +430,27 @@ article h2 {
   background-color: var(--foreground);
   color: var(--background);
 }
+#toggleL {
+  display: var(--magic-l);
+}
+#toggleD {
+  display: var(--magic-d);
+}
+
 @media screen and (max-width: 702px) {
-  .post {
+  .post3d {
     flex-wrap: wrap;
   }
   .preview-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 920px) {
+  #wide {
+    flex-wrap: wrap;
+  }
+  #ad {
     margin-left: auto;
     margin-right: auto;
   }
@@ -469,13 +496,17 @@ article h2 {
     --foreground: #fff;
     --accent: rgb(43, 174, 102);
     --title: rgb(17, 162, 72);
+    --magic-d: none;
+    --magic-l: inline;
   }
   body.light-theme {
     --background: #fff;
     --background-alt: rgba(255, 255, 255, 0.6);
     --foreground: #1d3557;
     --accent: rgb(43, 174, 102);
-    --title: rgb(10, 94, 42)
+    --title: rgb(10, 94, 42);
+    --magic-d: inline;
+    --magic-l: none;
   }
 
 }
