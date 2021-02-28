@@ -415,6 +415,10 @@ footer li {
 article h2 {
   margin-bottom: 0;
 }
+.btn-toggle {
+  background-color: var(--foreground);
+  color: var(--background);
+}
 @media screen and (max-width: 702px) {
   .post {
     flex-wrap: wrap;
