@@ -4,7 +4,7 @@ body {
   --background-alt: rgba(255, 255, 255, 0.6);
   --foreground: #1d3557;
   --accent: rgb(43, 174, 102);
-  --title: rgb(10, 94, 42)
+  --title: rgb(10, 94, 42);
 }
 body.dark-theme {
   --background: #121212;
@@ -303,6 +303,9 @@ article {
   line-height: 1.6;
   overflow: hidden;
 }
+#wide {
+  max-width: 70%;
+}
 .post3d {
   display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -340,7 +343,7 @@ article {
 footer {
   background-color: var(--accent);
   min-height: 250px;
-  color: var(--background);
+  color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

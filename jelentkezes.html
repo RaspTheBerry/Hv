@@ -3,6 +3,7 @@
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
+  <title>Pályázat jelentkezés - Hmvhely Klímastratégia</title>
 </head>
 <body>
 <script>
@@ -22,7 +23,7 @@ function closeNav() {
       <h1 id="cím">Hódmezővásárhelyi Klímastratégia</h1>
     </div>
   </div>
-    <div id="navigation">
+  <div id="navigation">
       <ul id="header-nav">
         <a id="sleek" href="index.html"><li class="nav-item">Főoldal</li></a>
         <a id="sleek" href="projekt-osszefoglalo.html"><li class="nav-item">Projekt összefoglaló</li></a>
@@ -78,38 +79,40 @@ if (prefersDarkScheme.matches) {
 localStorage.setItem("theme", theme);
 });
 </script>
-  <article class="center">
+  <article class="center" id="wide">
       <img src="Images/plakat.jpg" alt="plakát" width="500vw">
       <div>
         <h2 id="zero" class="line">MIT TEHETEK ÉN?</h2>
         <strong id="zero">Plakátterv és videopályázati felhívás</strong>
         <p id="zero">A pályázat tárgya egy plakátterv vagy rövid videó elkészítése válaszul arra, hogy mit tehetek én a Föld védelmében, a klímaváltozás mérsékléseként, negatív hatásainak megfékezésére.</p>
-        <p id="zero">A pályaművek benyújtásának módja és határideje:
-A pályázatokat kizárólag elektronikus úton lehet benyújtani a kovacs.ferenc@hodmezovasarhely.hu e-mailcímre Mit tehetek én? tárgymegjelöléssel. A pályaműveket javasolt nagy fájlküldő alkalmazások (pl. WeTransfer) használatával beküldeni.</p>
+        <strong id="zero">Pályázók köre:</strong>
+        <p id="zero">A plakát- és videópályázaton Hódmezővásárhely általános és középiskolás tanulói vehetnek részt.</p>
+        <strong id="zero">A pályaművek benyújtásának módja és határideje:</strong>
+        <p id="zero">A pályázatokat kizárólag elektronikus úton lehet benyújtani a kovacs.ferenc@hodmezovasarhely.hu e-mailcímre Mit tehetek én? tárgymegjelöléssel. A pályaműveket javasolt nagy fájlküldő alkalmazások (pl. WeTransfer) használatával beküldeni.</p>
+        <strong id="zero">Benyújtási határidő:</strong>
+        <p id="zero">A pályázatokat legkésőbb 2021. március 31. 23 óra 59 percig lehet benyújtani.<p>
+        <strong id="zero">Részletes leírás és jelentkezési lap:</stong><br>
+        <a id="bt" href="Files\Hmvhely_klima_tanulmanyi_palyazati_felhivas.pdf"><button type="button" class="button">Részletes leírás (pdf)</button></a>
+        <a id="bt" href="Files\Hmvhely_klima_tanulmanyi_palyazati_adatlap.docx"><button type="button" class="button">Jelentkezési adatlap (docx)</button></a>
       </div>
   </article>
-  <article>
+  <article id="wide">
   <p>Az e-mail kötelező elemei:
     <ul>
-  <li> Pályamű plakátterv: 1 darab bármilyen technikával, fekete-fehér vagy színes saját készítésű plakátterv.</li>
+  <li>Pályamű plakátterv: 1 darab bármilyen technikával, fekete-fehér vagy színes saját készítésű plakátterv.</li>
       <ul>
         <li>A kép mérete A4, maximum 5 megabájt.</li>
         <li>Fájlformátum: JPEG, PNG vagy TIFF.</li>
         <li>A pályamű fájlneve a következők szerint legyen megadva: plakat_palyazoneve_szuletesieve<br> (pl: plakat_nagyattila_20061125)</li>
       </ul>
-  <li> Pályázati adatlap és 1. sz. melléklete (Hozzájáruló nyilatkozat 18 éven aluli gyermek törvényes képviselője részére személyes adatok kezeléséhez, sokszorosításhoz, továbbításhoz)</li>
-      <ul>
-        <li>Hiánytalanul kitöltve, aláírva.</li>
-        <li>Az adatlapot kép vagy pdf formátumban szkennelve vagy fotózva kell megküldeni.</li>
-        <li>Az adatlap fájlneve a következők szerint legyen megadva: adatlap_palyazoneve_szuletesieve<br> (pl: adatlap_nagyattila_20061125)</li>
-      </ul>
-  Vagy
+  <p>Vagy/És</p>
   <li>Pályamű videó: 1 darab bármilyen videózásra alkalmas eszközzel (mobiltelefon, videokamera) készített fekete-
   fehér vagy színes saját alkotás.</li>
       <ul>
         <li>A videó hossza maximum 30 mp.</li>
         <li>A pályamű fájlneve a következők szerint legyen megadva: video_palyazoneve_szuletesieve<br> (pl: video_nagyattila_20061125)</li>
       </ul>
+  <p>És (18 éven aluli gyermek esetén)</p>
   <li>Pályázati adatlap és 1. sz. melléklete (Hozzájáruló nyilatkozat 18 éven aluli gyermek törvényes képviselője
   részére személyes adatok kezeléséhez, sokszorosításhoz, továbbításhoz)</li>
     <ul>
@@ -119,6 +122,8 @@ A pályázatokat kizárólag elektronikus úton lehet benyújtani a kovacs.feren
       (pl: adatlap_nagyattila_20061125)</li>
     </ul>
   </ul>
+</article>
+<article>
 </article>
   <footer>
     <div class="container">
@@ -134,9 +139,9 @@ A pályázatokat kizárólag elektronikus úton lehet benyújtani a kovacs.feren
           <br>
           <li><img id="ficon" src="Images\person.png" width="24px">Kovács Ferenc</li>
           <br>
-          <li><img id="ficon" src="Images\phone2.png" width="24px">Telefon: <a class="fa" href="tel:+62 530 100/246" id="number" class="footer-word" style="text-decoration: none; color: var(--background);">+62 530 100/246</a></li>
+          <li><img id="ficon" src="Images\phone2.png" width="24px">Telefon: <a class="fa" href="tel:+62 530 100/246" id="number" class="footer-word" style="text-decoration: none; color: white;">+62 530 100/246</a></li>
           <br>
-          <li><img id="ficon" src="Images\email.png" width="24px">Email: <a class="fa" href="mailto:kovacs.ferenc@hodmezovasarhely.hu" style="text-decoration: none; color: var(--background);">kovacs.ferenc@hodmezovasarhely.hu</a></li>
+          <li><img id="ficon" src="Images\email.png" width="24px">Email: <a class="fa" href="mailto:kovacs.ferenc@hodmezovasarhely.hu" style="text-decoration: none; color: white;">kovacs.ferenc@hodmezovasarhely.hu</a></li>
       </ul>
       </div>
       </div>
